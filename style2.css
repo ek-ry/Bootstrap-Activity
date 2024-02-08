@@ -1,0 +1,33 @@
+.content {
+    margin: 20px;
+}
+
+#toggle-menu {
+    background-color: rgb(228, 228, 228);
+    border-color: rgb(228, 228, 228);
+    color: black;
+    margin-left: 10px;
+}
+
+.nav-link {
+    position: relative;
+    color: #000; /* Set the default color of the text */
+}
+
+.nav-link:hover::before {
+    content: attr(data-hover-text);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: none;
+}
+
+.nav-link:hover::before {
+    display: block;
+}
